@@ -1,5 +1,6 @@
 # UnityClothExample
 Unity example scene illustrating a cloth component as a tapestry with a two-sided material
+![alt text](https://github.com/BenVanCitters/UnityClothExample/blob/master/screengrab.png)
 
 "The Unicorn is in Captivity and No Longer Dead" tapestrytexture from [Wikipedia](https://en.wikipedia.org/wiki/The_Hunt_of_the_Unicorn)
 
