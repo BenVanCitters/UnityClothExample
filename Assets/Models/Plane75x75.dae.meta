@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: af055bf3d253a423aaa2c70f3fdea86c
-timeCreated: 1515176820
+guid: 917b1938840ab4438bf49abd32c431cc
+timeCreated: 1515177958
 licenseType: Pro
 ModelImporter:
   serializedVersion: 22
@@ -16,7 +16,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: No Name
-    second: {fileID: 2100000, guid: 7176fca50084c47659f759e3a95a94cb, type: 2}
+    second: {fileID: 2100000, guid: 75090dc0b307946259ca4c650448e17f, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -69,7 +69,7 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
-  importAnimation: 1
+  importAnimation: 0
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2
