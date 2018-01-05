@@ -1,22 +1,29 @@
 fileFormatVersion: 2
-guid: 917b1938840ab4438bf49abd32c431cc
-timeCreated: 1515177958
+guid: a2102537adf4b455aac11c542862f128
+timeCreated: 1515179427
 licenseType: Pro
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
+    100000: Grid
+    100002: //RootNode
+    100004: Sun
+    400000: Grid
+    400002: //RootNode
+    400004: Sun
+    2300000: Grid
+    2300002: //RootNode
+    3300000: Grid
+    3300002: //RootNode
     4300000: Grid
     9500000: //RootNode
+    10800000: Sun
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: No Name
-    second: {fileID: 2100000, guid: 75090dc0b307946259ca4c650448e17f, type: 2}
+      name: Material
+    second: {fileID: 2100000, guid: 6060024f9ee3c40ee93bf6ab48140dd7, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -69,7 +76,7 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
-  importAnimation: 0
+  importAnimation: 1
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2

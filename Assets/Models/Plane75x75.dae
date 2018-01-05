@@ -5,12 +5,65 @@
       <author>Blender User</author>
       <authoring_tool>Blender 2.73.0 commit date:2015-01-20, commit time:18:16, hash:bbf09d9</authoring_tool>
     </contributor>
-    <created>2018-01-05T10:43:38</created>
-    <modified>2018-01-05T10:43:38</modified>
+    <created>2018-01-05T11:25:22</created>
+    <modified>2018-01-05T11:25:22</modified>
     <unit name="meter" meter="1"/>
     <up_axis>Z_UP</up_axis>
   </asset>
-  <library_images/>
+  <library_images>
+    <image id="The_Unicorn_in_Captivity_png" name="The_Unicorn_in_Captivity_png">
+      <init_from>The_Unicorn_in_Captivity.png</init_from>
+    </image>
+  </library_images>
+  <library_effects>
+    <effect id="Material-effect">
+      <profile_COMMON>
+        <newparam sid="The_Unicorn_in_Captivity_png-surface">
+          <surface type="2D">
+            <init_from>The_Unicorn_in_Captivity_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="The_Unicorn_in_Captivity_png-sampler">
+          <sampler2D>
+            <source>The_Unicorn_in_Captivity_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="The_Unicorn_in_Captivity_png-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.5 0.5 0.5 1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">50</float>
+            </shininess>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </phong>
+        </technique>
+        <extra>
+          <technique profile="GOOGLEEARTH">
+            <double_sided>1</double_sided>
+          </technique>
+        </extra>
+      </profile_COMMON>
+      <extra><technique profile="MAX3D"><double_sided>1</double_sided></technique></extra>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="Material-material" name="Material">
+      <instance_effect url="#Material-effect"/>
+    </material>
+  </library_materials>
   <library_geometries>
     <geometry id="Grid_002-mesh" name="Grid.002">
       <mesh>
@@ -56,7 +109,7 @@
         <vertices id="Grid_002-mesh-vertices">
           <input semantic="POSITION" source="#Grid_002-mesh-positions"/>
         </vertices>
-        <polylist count="10952">
+        <polylist material="Material-material" count="10952">
           <input semantic="VERTEX" source="#Grid_002-mesh-vertices" offset="0"/>
           <input semantic="NORMAL" source="#Grid_002-mesh-normals" offset="1"/>
           <input semantic="TEXCOORD" source="#Grid_002-mesh-map-0" offset="2" set="0"/>
@@ -71,8 +124,16 @@
   <library_visual_scenes>
     <visual_scene id="Scene" name="Scene">
       <node id="Grid" name="Grid" type="NODE">
-        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
-        <instance_geometry url="#Grid_002-mesh"/>
+        <matrix sid="transform">-6.24679e-8 1 -4.37114e-8 0 0 -4.37114e-8 -1 0 -1.4291 -4.37114e-8 1.91069e-15 0 0 0 0 1</matrix>
+        <instance_geometry url="#Grid_002-mesh">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Material-material" target="#Material-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
       </node>
     </visual_scene>
   </library_visual_scenes>
